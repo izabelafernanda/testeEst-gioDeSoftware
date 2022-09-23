@@ -15,11 +15,11 @@ public class App {
         Preco preco = new Preco(40, 20);
         Preco precoFinalDeSemana = new Preco(preco.getPrecoComAumento(preco.getGrandePorte(), 20),
                 preco.getPrecoComAumento(preco.getPequenoPorte(), 20));
-        PetShop petshop = new PetShop("meuCaninoFeliz", preco, precoFinalDeSemana, 2);
+        PetShop petshop = new PetShop("Meu Canino Feliz", preco, precoFinalDeSemana, 2);
 
         Preco preco2 = new Preco(50, 15);
         Preco precoFinalDeSemana2 = new Preco(55, 20);
-        PetShop petshop2 = new PetShop("vaiRex", preco2, precoFinalDeSemana2, 1.7);
+        PetShop petshop2 = new PetShop("Vai Rex", preco2, precoFinalDeSemana2, 1.7);
 
         Preco preco3 = new Preco(45, 30);
         PetShop petshop3 = new PetShop("ChowChawgas", preco3, preco3, 0.8);
@@ -32,9 +32,7 @@ public class App {
         App app = new App();
         Banho banho = app.descobrirOMelhorPetShopParaODiaDaSemana(petshops, data, quantidadeCaesGrandes,
                 quantidadeCaesPequenos);
-        System.out.println("O nome do melhor PetShop para o canil de cães é o " + banho.getPetshop().getNome()
-                + " e o seu valor total é de "
-                + banho.getTotal());
+        System.out.println(banho);
 
     }
 

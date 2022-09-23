@@ -25,8 +25,8 @@ public class Preco {
         this.pequenoPorte = pequenoPorte;
     }
 
-    public double getPrecoComAumento(double preco, int desconto) {
-        return preco * 100 / desconto;
+    public double getPrecoComAumento(double preco, int aumento) {
+        return preco * 100 / aumento;
     }
 
 }

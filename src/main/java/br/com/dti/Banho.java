@@ -25,4 +25,9 @@ public class Banho {
         this.total = total;
     }
 
+    @Override
+    public String toString() {
+        return getPetshop().getNome() + " " + getTotal();
+    }
+
 }

@@ -44,7 +44,6 @@ public class AppTest {
     }
 
     @Test
-
     public void testeDescobrirOMelhorPetShopParaODiaDaSemanaUtilConsiderandoADistanciaDoCanil() {
         // Arranjo//
         Preco preco = new Preco(40, 20);

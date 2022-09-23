@@ -1,10 +1,13 @@
 package br.com.dti;
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+
 public class PetShop {
-    private String nome;  
+    private String nome;
     private Preco preco;
     private Preco precoFinalDeSemana;
-    private double distancia; 
+    private double distancia;
 
     public PetShop(String nome, Preco preco, Preco precoFinalDeSemana, double distancia) {
         this.nome = nome;
@@ -16,6 +19,7 @@ public class PetShop {
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -44,11 +48,11 @@ public class PetShop {
         this.distancia = distancia;
     }
 
-    public Preco getPrecoDoDia(String dia) {
-        if (dia.equals("util")) {
-            return preco; 
-        }else {
+    public Preco getPrecoDoDia(LocalDate data) {
+        if (data.getDayOfWeek().equals(DayOfWeek.SATURDAY) || data.getDayOfWeek().equals(DayOfWeek.MONDAY)) {
             return precoFinalDeSemana;
+        } else {
+            return preco;
         }
     }
 }
